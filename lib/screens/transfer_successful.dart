@@ -507,7 +507,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
       backgroundColor: purple,
       body: Stack(
         children: [
-          // Big overlapping circles background accent
           Positioned(
             left: -263,
             top: 350,
@@ -533,7 +532,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
             ),
           ),
 
-          // Scrollable main content (card + buttons)
           Positioned(
             top: 80,
             left: 0,
@@ -546,7 +544,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  // Main white container card
                   Container(
                     width: containerWidth,
                     decoration: BoxDecoration(
@@ -557,7 +554,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        // Detail Amount and notification area
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
@@ -598,7 +594,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
 
                         const SizedBox(height: 40),
 
-                        // Destination info
                         SizedBox(
                           width: 350,
                           child: Column(
@@ -616,7 +611,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
                               const SizedBox(height: 16),
                               Row(
                                 children: [
-                                  // Avatar circle placeholder
                                   Container(
                                     width: 48,
                                     height: 48,
@@ -630,7 +624,7 @@ class TransferSuccessfulScreen extends StatelessWidget {
                                     ),
                                   ),
                                   const SizedBox(width: 20),
-                                  // Name and phone
+
                                   Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -666,7 +660,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
 
                         const SizedBox(height: 40),
 
-                        // Transaction details
                         SizedBox(
                           width: 350,
                           child: Column(
@@ -684,7 +677,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
                               ),
                               const SizedBox(height: 16),
 
-                              // Payment
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -713,7 +705,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
                               ),
                               const SizedBox(height: 12),
 
-                              // Date
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -742,7 +733,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
                               ),
                               const SizedBox(height: 12),
 
-                              // Time
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -771,7 +761,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
                               ),
                               const SizedBox(height: 12),
 
-                              // Reference Number
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -800,7 +789,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
                               ),
                               const SizedBox(height: 12),
 
-                              // Fee
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -830,7 +818,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
 
                               const SizedBox(height: 16),
 
-                              // Total Payment
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -866,7 +853,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
 
                   const SizedBox(height: 28),
 
-                  // Buttons beneath card
                   SizedBox(
                     width: containerWidth,
                     child: Column(
@@ -895,9 +881,7 @@ class TransferSuccessfulScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 20),
                         OutlinedButton(
-                          onPressed: () {
-                            // TODO: add share functionality
-                          },
+                          onPressed: () {},
                           style: OutlinedButton.styleFrom(
                             side: const BorderSide(
                               color: Colors.white,
@@ -926,7 +910,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
             ),
           ),
 
-          // Circular white icon container with check circle icon
           Positioned(
             top: 40,
             left: (MediaQuery.of(context).size.width - 80) / 2,
@@ -946,7 +929,6 @@ class TransferSuccessfulScreen extends StatelessWidget {
             ),
           ),
 
-          // Optional: Status bar placeholder at top
           Positioned(
             top: 0,
             left: 0,

@@ -1,186 +1,13 @@
-// import 'package:flutter/material.dart';
-
-// class TransferScreen extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       backgroundColor: Color(0xFFF9FAFF),
-//       appBar: AppBar(
-//         backgroundColor: Colors.white,
-//         elevation: 0,
-//         leading: IconButton(
-//           icon: Icon(Icons.arrow_back_ios, color: Color(0xFF1A1A1A)),
-//           onPressed: () => Navigator.pop(context),
-//         ),
-//         title: Text(
-//           'Transfer',
-//           style: TextStyle(
-//             color: Color(0xFF1A1A1A),
-//             fontWeight: FontWeight.bold,
-//             fontSize: 22,
-//           ),
-//         ),
-//         centerTitle: true,
-//         actions: [
-//           IconButton(
-//             icon: Icon(Icons.help_outline, color: Color(0xFF5D2DFD)),
-//             onPressed: () {
-//               // TODO: Show help or info about Transfer screen
-//             },
-//           ),
-//         ],
-//       ),
-//       body: Padding(
-//         padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32),
-//         child: Column(
-//           children: [
-//             // Quick Transfer Options (bigger, closer)
-//             Row(
-//               mainAxisAlignment: MainAxisAlignment.center,
-//               children: [
-//                 _buildOptionCard(
-//                   context,
-//                   icon: Icons.person_outline,
-//                   label: 'To Friend',
-//                   onTap: () => Navigator.pushNamed(context, '/transfer-friend'),
-//                   width: 140,
-//                   height: 160,
-//                 ),
-//                 SizedBox(width: 24),
-//                 _buildOptionCard(
-//                   context,
-//                   icon: Icons.account_balance_outlined,
-//                   label: 'To Bank',
-//                   onTap: () => Navigator.pushNamed(context, '/transfer-bank'),
-//                   width: 140,
-//                   height: 160,
-//                 ),
-//               ],
-//             ),
-
-//             SizedBox(height: 48),
-
-//             // Recent Contacts (keep as is)
-//             Align(
-//               alignment: Alignment.centerLeft,
-//               child: Text(
-//                 'Recent Contacts',
-//                 style: TextStyle(
-//                   fontSize: 20,
-//                   fontWeight: FontWeight.w600,
-//                   color: Color(0xFF1A1A1A),
-//                 ),
-//               ),
-//             ),
-
-//             SizedBox(height: 16),
-
-//             Expanded(
-//               child: ListView(
-//                 children: [
-//                   _buildContactItem('Alice Johnson', 'assets/images/user1.png'),
-//                   _buildContactItem('Bob Smith', 'assets/images/user2.png'),
-//                   _buildContactItem('Charlie Lee', 'assets/images/user3.png'),
-//                   // Add more contacts here
-//                 ],
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-
-//   Widget _buildOptionCard(
-//     BuildContext context, {
-//     required IconData icon,
-//     required String label,
-//     required VoidCallback onTap,
-//     double width = 100,
-//     double height = 120,
-//   }) {
-//     return GestureDetector(
-//       onTap: onTap,
-//       child: Container(
-//         width: width,
-//         height: height,
-//         decoration: BoxDecoration(
-//           color: Colors.white,
-//           borderRadius: BorderRadius.circular(20),
-//           boxShadow: [
-//             BoxShadow(
-//               color: Color(0x11000000),
-//               blurRadius: 10,
-//               offset: Offset(0, 4),
-//             ),
-//           ],
-//         ),
-//         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             Container(
-//               decoration: BoxDecoration(
-//                 color: Color(0xFF5D2DFD).withOpacity(0.15),
-//                 borderRadius: BorderRadius.circular(16),
-//               ),
-//               padding: EdgeInsets.all(20),
-//               child: Icon(icon, size: 40, color: Color(0xFF5D2DFD)),
-//             ),
-//             SizedBox(height: 16),
-//             Text(
-//               label,
-//               style: TextStyle(
-//                 fontWeight: FontWeight.w600,
-//                 fontSize: 18,
-//                 color: Color(0xFF1A1A1A),
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-
-//   Widget _buildContactItem(String name, String imagePath) {
-//     return Container(
-//       margin: EdgeInsets.only(bottom: 16),
-//       child: ListTile(
-//         leading: CircleAvatar(
-//           backgroundImage: AssetImage(imagePath),
-//           radius: 28,
-//           backgroundColor: Colors.grey[200],
-//         ),
-//         title: Text(
-//           name,
-//           style: TextStyle(
-//             fontWeight: FontWeight.w600,
-//             fontSize: 16,
-//             color: Color(0xFF1A1A1A),
-//           ),
-//         ),
-//         trailing: Icon(
-//           Icons.arrow_forward_ios,
-//           color: Color(0xFF5D2DFD),
-//           size: 18,
-//         ),
-//         onTap: () {
-//           // TODO: Implement contact tap
-//         },
-//       ),
-//     );
-//   }
-// }
 import 'package:flutter/material.dart';
 
 class TransferScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF5D2DFD), // Purple background
+      backgroundColor: Color(0xFF5D2DFD),
       body: SafeArea(
         child: Stack(
           children: [
-            // Top bar with back arrow, title, question mark
             Positioned(
               left: 0,
               right: 0,
@@ -214,7 +41,6 @@ class TransferScreen extends StatelessWidget {
               ),
             ),
 
-            // White curved container with content below top bar
             Positioned.fill(
               top: 56,
               child: Container(
@@ -229,7 +55,6 @@ class TransferScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        // Transfer options row
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -261,7 +86,6 @@ class TransferScreen extends StatelessWidget {
 
                         SizedBox(height: 48),
 
-                        // Latest Transfers title
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -276,7 +100,6 @@ class TransferScreen extends StatelessWidget {
 
                         SizedBox(height: 16),
 
-                        // Transfer list
                         _buildTransferItem(
                           name: 'Alice Johnson',
                           date: 'Aug 5, 2025',
@@ -299,7 +122,7 @@ class TransferScreen extends StatelessWidget {
                           amountColor: Colors.red,
                         ),
 
-                        SizedBox(height: 32), // bottom padding
+                        SizedBox(height: 32),
                       ],
                     ),
                   ),

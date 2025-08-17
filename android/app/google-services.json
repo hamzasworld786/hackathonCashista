@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "163985194048",
-    "project_id": "hackathoncashapp",
-    "storage_bucket": "hackathoncashapp.firebasestorage.app"
+    "project_number": "353534612690",
+    "project_id": "cashistahackathon",
+    "storage_bucket": "cashistahackathon.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:163985194048:android:0c054afba7bf2e6c3b33a5",
+        "mobilesdk_app_id": "1:353534612690:android:a8ce5982f5fb1c05ec890b",
         "android_client_info": {
           "package_name": "com.example.e_wallet_mobile_app"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC_8LUo3ALV0KGIyct76PDX6eOU9kMv8yI"
+          "current_key": "AIzaSyCIpKXSuxI-R-bk16S0ThFQa6J7SPBmx4M"
         }
       ],
       "services": {

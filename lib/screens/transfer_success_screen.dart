@@ -4,7 +4,6 @@ class TransferSuccessScreen extends StatelessWidget {
   final String recipient;
   final String amount;
 
-  // You can pass recipient and amount to display dynamically
   TransferSuccessScreen({
     this.recipient = 'John Doe',
     this.amount = '\$100.00',
@@ -20,7 +19,6 @@ class TransferSuccessScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Success Icon
               Container(
                 decoration: BoxDecoration(
                   color: Color(0xFF5D2DFD).withOpacity(0.15),
@@ -67,7 +65,6 @@ class TransferSuccessScreen extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    // Navigate back to home or wherever you want
                     Navigator.pushNamedAndRemoveUntil(
                       context,
                       '/home',

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'transfer_successful.dart'; // Adjust path if needed
+import 'transfer_successful.dart';
 
 class TransferToFriendsScreen extends StatefulWidget {
   final double balance;
@@ -69,18 +69,16 @@ class _TransferToFriendsScreenState extends State<TransferToFriendsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF5D2DFD), // Purple background
+      backgroundColor: Color(0xFF5D2DFD),
       body: SafeArea(
         child: Stack(
           children: [
-            // Header: back arrow, centered title, question mark, balance, top up button
             Positioned(
               left: 24,
               right: 24,
               top: 24,
               child: Column(
                 children: [
-                  // First row: Back arrow, centered title, question mark
                   Stack(
                     alignment: Alignment.center,
                     children: [
@@ -108,9 +106,7 @@ class _TransferToFriendsScreenState extends State<TransferToFriendsScreen> {
                       Align(
                         alignment: Alignment.centerRight,
                         child: GestureDetector(
-                          onTap: () {
-                            // TODO: Show help/info
-                          },
+                          onTap: () {},
                           child: Icon(
                             Icons.help_outline,
                             color: Colors.white,
@@ -123,7 +119,6 @@ class _TransferToFriendsScreenState extends State<TransferToFriendsScreen> {
 
                   SizedBox(height: 16),
 
-                  // Second row: Balance left, Top Up button right
                   Row(
                     children: [
                       Expanded(
@@ -145,9 +140,7 @@ class _TransferToFriendsScreenState extends State<TransferToFriendsScreen> {
                         elevation: 3,
                         child: InkWell(
                           borderRadius: BorderRadius.circular(20),
-                          onTap: () {
-                            // TODO: Navigate to top-up page
-                          },
+                          onTap: () {},
                           child: Padding(
                             padding: const EdgeInsets.symmetric(
                               horizontal: 20,
@@ -170,7 +163,6 @@ class _TransferToFriendsScreenState extends State<TransferToFriendsScreen> {
               ),
             ),
 
-            // White stack container with inputs below header
             Positioned.fill(
               top: 160,
               child: Container(
@@ -184,7 +176,6 @@ class _TransferToFriendsScreenState extends State<TransferToFriendsScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      // Phone Number input with underline
                       SizedBox(height: 8),
                       TextField(
                         controller: _phoneController,
@@ -209,7 +200,6 @@ class _TransferToFriendsScreenState extends State<TransferToFriendsScreen> {
 
                       SizedBox(height: 32),
 
-                      // Amount selector text centered
                       Center(
                         child: Column(
                           children: [
@@ -239,7 +229,6 @@ class _TransferToFriendsScreenState extends State<TransferToFriendsScreen> {
 
                       SizedBox(height: 32),
 
-                      // Notes input with full box style (unchanged)
                       Text(
                         'Notes',
                         style: TextStyle(
@@ -296,11 +285,9 @@ class _TransferToFriendsScreenState extends State<TransferToFriendsScreen> {
                                 recipientName: "hamza",
                                 recipientPhone: phone,
                                 amount: _amount,
-                                date: "June 12, 2023", // example date
-                                time: "20:32", // example time
-                                referenceNumber:
-                                    "QOIU-0012-ADFE-2234", // example ref
-                                // fee is optional
+                                date: "June 12, 2023",
+                                time: "20:32",
+                                referenceNumber: "QOIU-0012-ADFE-2234",
                               ),
                             ),
                           );
